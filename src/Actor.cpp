@@ -18,3 +18,8 @@ void Actor::update(World& world)
 	input_->update(world, *graphics_, *this);
 	graphics_->update(*this);
 }
+
+void Actor::render(sf::RenderWindow& window)
+{
+	graphics_->render(window);
+}
