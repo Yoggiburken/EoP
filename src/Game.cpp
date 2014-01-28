@@ -19,6 +19,9 @@ Game::~Game()
 
 void Game::main()
 {
+	if(!world_.load()) {
+		return;
+	}
 	while(window_->isOpen())
 	{
 		checkEvents();
