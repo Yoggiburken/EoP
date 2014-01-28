@@ -16,9 +16,8 @@ public:
 	enum LoadType {Menu, Game};
 	bool					load(World::LoadType type, sf::Window* window);
 private:
-	Actor						actor_;
-	/*Actor*					actors_;
-	unsigned int			actor_count_;*/
+	Actor*					actors_;
+	unsigned int			actor_count_;
 
 	sf::Window*				window_;
 };
