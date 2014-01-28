@@ -2,6 +2,7 @@
 
 bool World::load()
 {
+	actor_count_ = 0; 
 	return true;
 }
 
