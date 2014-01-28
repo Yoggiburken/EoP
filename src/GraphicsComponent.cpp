@@ -10,6 +10,7 @@ GraphicsComponent::GraphicsComponent()
 void GraphicsComponent::receive(unsigned int message)
 {
 	message_received_ = true;
+	std::cout<<"message received: "<<message<<std::endl;
 	if(message_count_ == 0) {
 		messages_ 		= new unsigned int[1];
 		messages_[0]	= message;

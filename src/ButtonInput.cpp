@@ -4,6 +4,8 @@
 #include"../include/World.hpp"
 #include<SFML/Window/Mouse.hpp>
 
+#include<iostream>
+
 const unsigned int 		CLICKED = 0;
 
 void ButtonInput::update(World& world, GraphicsComponent& graphics, Actor& actor)

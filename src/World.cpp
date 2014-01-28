@@ -26,6 +26,8 @@ bool World::load(World::LoadType type, sf::Window* window)
 		actors_ = new Actor[1];
 		actors_[0].setInputComponent(new ButtonInput());
 		actors_[0].setGraphicsComponent(new ButtonGraphics());
+		actors_[0].position = sf::Vector2f(400, 300);
+		actors_[0].size		= sf::Vector2f(200, 60);
 		actor_count_=1;
 		return true;
 	} else if(type == World::Game) {
