@@ -2,10 +2,12 @@
 #define INPUT_COMPONENT_HPP
 
 class Actor;
+class World;
+class GraphicsComponent;
 
 class InputComponent {
 public:
-	virtual void				update(Actor& actor) {}
+	virtual void				update(World& world, GraphicsComponent& graphics, Actor& actor) {}
 };
 
 #endif
