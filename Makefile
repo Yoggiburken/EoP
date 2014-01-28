@@ -1,4 +1,4 @@
-NAME = MouseMulti
+NAME = EmpireOfPizza
 CC=g++
 CPPLIBS=  -lsfml-graphics -lsfml-window -lsfml-network -lsfml-system
 #CPPFLAGS=
