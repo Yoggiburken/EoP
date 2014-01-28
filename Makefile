@@ -1,6 +1,6 @@
 NAME = EmpireOfPizza
 CC=g++
-CPPLIBS=  -lsfml-graphics -lsfml-window -lsfml-network -lsfml-system
+CPPLIBS=  -lsfml-graphics -lsfml-window -lsfml-system
 #CPPFLAGS=
 
 ## Dependencies ##

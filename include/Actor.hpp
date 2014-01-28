@@ -8,6 +8,8 @@
 
 class Actor {
 public:
+	sf::Vector2f			position;
+	sf::Vector2f			size;
 							Actor();
 							Actor(InputComponent* input, GraphicsComponent* graphics);
 							~Actor();
@@ -16,6 +18,8 @@ public:
 
 	void					update(World& world);
 	void					render(sf::RenderWindow& window);
+
+	void 					operator=(Actor& right);
 private:
 	InputComponent*			input_;
 	GraphicsComponent*		graphics_;

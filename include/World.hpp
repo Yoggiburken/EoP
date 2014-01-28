@@ -6,13 +6,21 @@
 
 class World {
 public:
+							World();
 	void					update();
 	void					render(sf::RenderWindow& window);
 	
-	bool					load();
+	void					setWindowPointer(sf::Window* window);
+	sf::Vector2i			getMousePosition() const;
+
+	enum LoadType {Menu, Game};
+	bool					load(World::LoadType type, sf::Window* window);
 private:
-	Actor*					actors_;
-	unsigned int			actor_count_;
+	Actor						actor_;
+	/*Actor*					actors_;
+	unsigned int			actor_count_;*/
+
+	sf::Window*				window_;
 };
 
 #endif

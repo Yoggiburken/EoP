@@ -10,6 +10,7 @@ const sf::Time					UPDATE_FREQUENCY(sf::milliseconds(16));
 Game::Game()
 {
 	window_ = new sf::RenderWindow(VIDEOMODE, TITLE, STYLE, CONTEXTSETTINGS);
+	window_->setVerticalSyncEnabled(true);
 }
 
 Game::~Game()
@@ -19,9 +20,10 @@ Game::~Game()
 
 void Game::main()
 {
-	if(!world_.load()) {
+	if(!world_.load(World::Menu, window_)) {
 		return;
 	}
+	world_.setWindowPointer(window_);
 	while(window_->isOpen())
 	{
 		checkEvents();

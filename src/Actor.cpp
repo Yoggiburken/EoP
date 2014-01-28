@@ -5,7 +5,10 @@ Actor::Actor() {}
 Actor::Actor(InputComponent* input, GraphicsComponent* graphics) :
 	input_(input),
 	graphics_(graphics)
-{}
+{
+	size = sf::Vector2f(200, 60);
+	position = sf::Vector2f(400, 300);
+}
 
 Actor::~Actor()
 {
@@ -22,4 +25,12 @@ void Actor::update(World& world)
 void Actor::render(sf::RenderWindow& window)
 {
 	graphics_->render(window);
+}
+
+void Actor::operator=(Actor& right)
+{
+	position	= right.position;
+	size		= right.size;
+	input_ 		= right.input_;
+	graphics_	= right.graphics_;
 }
