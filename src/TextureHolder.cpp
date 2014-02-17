@@ -1,12 +1,12 @@
 #include"../include/TextureHolder.hpp"
 #include<fstream>
 
-sf::Texture& Texture::TextureHolder::getTexture(Texture::Id texture_id)
+sf::Texture& TextureHolder::getTexture(TextureHolder::Id texture_id)
 {
 	return textures[texture_id];
 }
 
-bool Texture::TextureHolder::load(Texture::Id texture_id, const char* filename)
+bool TextureHolder::load(TextureHolder::Id texture_id, const char* filename)
 {
 	sf::Texture text;
 	if(text.loadFromFile(filename)) {

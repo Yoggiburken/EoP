@@ -4,17 +4,15 @@
 #include<map>
 #include<SFML/Graphics/Texture.hpp>
 
-namespace Texture {
 
+
+class TextureHolder {
+public:
 	enum Id {PlayButton, ExitButton};
-
-	class TextureHolder {
-	public:
-		sf::Texture&			getTexture(Texture::Id texture);
-		bool					load(Texture::Id texture, const char* filename);
-	private:
-		std::map<Texture::Id, sf::Texture>		textures;
-	};
+	sf::Texture&			getTexture(TextureHolder::Id texture);
+	bool					load(TextureHolder::Id texture, const char* filename);
+private:	
+	std::map<TextureHolder::Id, sf::Texture>		textures;
 };
 #endif
 
